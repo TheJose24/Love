@@ -79,10 +79,11 @@ button.no {
 }
 
 footer p.marca {
-  left: 41vw;
-  top: 90%;
+  left: 50%;
+  bottom: 10px;
   opacity: 40%;
-  position: absolute;
+  position: fixed;
+  transform: translateX(-50%);
 }
 /*================ Fin cuerpo principal ================*/
 
@@ -196,12 +197,6 @@ p.reiniciar a {
     margin: 0;
   }
 
-  footer p.marca {
-    left: 23.5vw;
-    top: 90%;
-    opacity: 40%;
-    position: absolute;
-  }
   /*================ Fin cuerpo principal ================*/
 
   /*===================== Cuerpo no visible ======================*/
