@@ -1,0 +1,274 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;0,900;1,500;1,600&display=swap";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e5e7eb;
+}
+
+html {
+  line-height: 1.5;
+  font-family: Poppins, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol,
+    "Noto Color Emoji";
+  font-feature-settings: normal;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  position: relative;
+}
+/*================ Cuerpo principal ================*/
+h1 {
+  padding-top: 27vh;
+  display: flex;
+}
+
+.texto {
+  font-size: 6em;
+  justify-content: center;
+  background-image: linear-gradient(to right, #dc2626, #d946ef, #f43f5e);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 800;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+}
+
+.botones {
+  margin-top: 6vh;
+}
+
+button {
+  width: 22vw;
+  height: 12vh;
+  background-color: black;
+  border-radius: 15px;
+  font-size: 1.5em;
+  font-weight: 800;
+  margin-inline: 15px;
+}
+
+button.si {
+  cursor: pointer;
+  left: 25vw;
+  border: #a855f7 solid;
+  color: #a855f7;
+  position: absolute;
+}
+
+button.no {
+  right: 25vw;
+  border: #ef4444 solid;
+  color: #ef4444;
+  position: absolute;
+}
+
+footer p.marca {
+  left: 41vw;
+  top: 90%;
+  opacity: 40%;
+  position: absolute;
+}
+/*================ Fin cuerpo principal ================*/
+
+/*===================== Cuerpo no visible ======================*/
+.oculto {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+img.gifs {
+  width: 20vw;
+  border-radius: 30px;
+  padding: 1em;
+}
+
+.gifs {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.alerta {
+  z-index: -10;
+}
+
+.alerta-visible {
+  z-index: 10;
+}
+
+section {
+  top: 2vh;
+  left: 20.5vw;
+  position: absolute;
+  height: 98vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor {
+  border: #dc2626 solid;
+  border-radius: 15px;
+  background-color: #d946ef;
+  width: 60vw;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+p {
+  color: white;
+}
+
+p.cabeza {
+  font-size: 2.25em;
+  padding-bottom: 1em;
+}
+
+.gif {
+  width: 20vw;
+  border-radius: 30px;
+  padding: 1em;
+}
+
+p.celebracion {
+  font-size: 1.5em;
+  padding: 1em;
+}
+
+p.reiniciar a {
+  color: rgba(255, 255, 255, 0.7);
+  padding-top: 2em;
+  text-decoration: none;
+}
+/*===================== Fin cuerpo no visible ======================*/
+
+/*=================== Responsive Design ===========================*/
+
+@media (max-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  /*================ Cuerpo principal ================*/
+  h1 {
+    padding-top: 0;
+  }
+
+  .texto {
+    font-size: 3em;
+    text-align: center;
+  }
+
+  .botones {
+    margin-top: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;/*?????????????????? Cambiar aqui ??????????????????*/
+  }
+
+  button {
+    width: 20vw;
+    height: 10vh;
+    margin: 0;
+  }
+
+  footer p.marca {
+    left: 23.5vw;
+    top: 90%;
+    opacity: 40%;
+    position: absolute;
+  }
+  /*================ Fin cuerpo principal ================*/
+
+  /*===================== Cuerpo no visible ======================*/
+  .oculto {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  img.gifs {
+    width: 300px;
+  }
+
+  .alerta {
+    z-index: -10;
+  }
+
+  .alerta-visible {
+    z-index: 10;
+  }
+
+  section {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .contenedor {
+    border: #dc2626 solid;
+    border-radius: 15px;
+    background-color: #d946ef;
+    max-width: 80%;
+    width: 400px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  p {
+    color: white;
+    text-align: center;
+  }
+
+  p.cabeza {
+    font-size: 1.5em;
+    padding-bottom: 1em;
+  }
+
+  .gif {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 30px;
+    padding: 1em;
+  }
+
+  p.celebracion {
+    font-size: 1em;
+    padding: 1em;
+  }
+
+  /*===================== Fin cuerpo no visible ======================*/
+}
